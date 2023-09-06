@@ -68,32 +68,32 @@ const team = [
     {
         name : 'Wayne Barnett',
         role : 'Founder & CEO',
-        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/wayne-barnett-founder-ceo.jpg'
+        image : 'wayne-barnett-founder-ceo.jpg'
     },
     {
         name : 'Angela Caroll',
         role : 'Chief Editor',
-        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/angela-caroll-chief-editor.jpg'
+        image : 'angela-caroll-chief-editor.jpg'
     },
     {
         name : 'Walter Gordon',
         role : 'Office Manager',
-        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/walter-gordon-office-manager.jpg'
+        image : 'walter-gordon-office-manager.jpg'
     },
     {
         name : 'Angela Lopez',
         role : 'Social Media Manager',
-        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/angela-lopez-social-media-manager.jpg'
+        image : 'angela-lopez-social-media-manager.jpg'
     },
     {
         name : 'Scott Estrada',
         role : 'Developer',
-        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/scott-estrada-developer.jpg'
+        image : 'scott-estrada-developer.jpg'
     },
     {
         name : 'Barbara Ramos',
         role : 'Graphic Designer',
-        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/barbara-ramos-graphic-designer.jpg'
+        image : 'barbara-ramos-graphic-designer.jpg'
     }
 
 ]
@@ -113,17 +113,20 @@ for (let i = 0; i < team.length; i++) {
     
     const rowElement = document.querySelector('.team .row')
     
+    // Organizzare i singoli membri in card/schede
+    // Trasformare la stringa foto in una immagine effettiva
     const markupCards = `
         <div class="col">
             <div class="card h-100">
-                <img src="${figure['image']}" class="card-img-top" alt="profile foto">
-                <div class="card-body">
+
+            <div class="card text-bg-dark">
+                <img src="./assets/img/${figure['image']}" class="card-img" alt="profile foto">
+                <div class="card-img-overlay position-absolute top-50 start-0 bg-secondary bg-opacity-50">
                     <h5 class="card-title">${figure.name}</h5>
                     <p class="card-text">${figure.role}</p>
+                    <p class="card-text"><small>Team MyBusiness</small></p>
                 </div>
-            </div>
-        </div>
-    `
+            </div>`
     
     // console.log(markupCards);
     
@@ -131,6 +134,6 @@ for (let i = 0; i < team.length; i++) {
 }
 
 
-// Trasformare la stringa foto in una immagine effettiva
 
-// Organizzare i singoli membri in card/schede
+
+
