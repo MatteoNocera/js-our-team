@@ -47,8 +47,38 @@ Tools :
 
 */
 
-// creare un array di oggetti del team con seguenti informazioni: nome, ruolo e foto
+// Seleziono il punto della DOM
+const rowElement = document.querySelector('.team .row')
 
+// Creo una funzione per stampare in pagina le cards
+function stampMarkups(img, name, role) {
+
+    // Organizzare i singoli membri in card/schede
+    // Trasformare la stringa foto in una immagine effettiva
+    const markupCards = `
+        <div class="col">
+            <div class="card h-100">
+
+            <div class="card text-bg-dark">
+                <img src="./assets/img/${img}" class="card-img" alt="profile foto">
+                <div class="card-img-overlay position-absolute top-50 start-0 bg-secondary bg-opacity-50">
+                    <h5 class="card-title">${name}</h5>
+                    <p class="card-text">${role}</p>
+                    <p class="card-text"><small>Team MyBusiness</small></p>
+                </div>
+            </div>`
+
+    rowElement.insertAdjacentHTML('beforeend', markupCards);
+}
+
+
+    
+    
+    
+
+const newFigureElement = document.querySelector('form');
+
+// creare un array di oggetti del team con seguenti informazioni: nome, ruolo e foto
 // Creare l’array di oggetti con le informazioni fornite
 
 const team = [
@@ -98,51 +128,34 @@ for (let i = 0; i < team.length; i++) {
 
     // Stampare le stesse informazioni su DOM sottoforma di stringhe
     
-    const rowElement = document.querySelector('.team .row')
-    
-    // Organizzare i singoli membri in card/schede
-    // Trasformare la stringa foto in una immagine effettiva
-    const markupCards = `
-        <div class="col">
-            <div class="card h-100">
-
-            <div class="card text-bg-dark">
-                <img src="./assets/img/${figure['image']}" class="card-img" alt="profile foto">
-                <div class="card-img-overlay position-absolute top-50 start-0 bg-secondary bg-opacity-50">
-                    <h5 class="card-title">${figure.name}</h5>
-                    <p class="card-text">${figure.role}</p>
-                    <p class="card-text"><small>Team MyBusiness</small></p>
-                </div>
-            </div>`
+    stampMarkups(figure.image, figure.name, figure.role)
     
     // console.log(markupCards);
-    
-    rowElement.insertAdjacentHTML('beforeend', markupCards);
 }
 
 
+// Creo una funzione collegata al submit per inserire e stampare un nuovo membro
+newFigureElement.addEventListener('submit', function (ev) {
 
-/* const insertNameElement = document.querySelector('form').submit(); */
-
-//console.log(insertNameElement);
-
-/* function formStart(event){
-    document.querySelector('form').submit(event);
-    event.preventDefault
-    let valueElement = document.getElementById('your_name').value;
-    console.log(valueElement);
-
-} */
-
-
-
-function formDate() {
-
-    let name = document.getElementById('your_name').value;
+    ev.preventDefault();
     
-    team.push(name);  
+    let userName = document.getElementById("your_name").value;
+    let userRole = document.getElementById("role").value;
+    let userImg = document.getElementById("insert_file").files[0].name;
 
-    //return false;
-}
+    //console.log(userName);
+    //console.log(userRole);
+    //console.log(userImg);
 
-console.log(team);
+    const newFigure = {
+        name : userName,
+        role : userRole,
+        image : userImg
+    }
+
+    team.push(newFigure);
+
+    console.log(team);
+    stampMarkups(userImg, userName, userRole);
+})
+
