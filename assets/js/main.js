@@ -15,6 +15,7 @@ Consigli del giorno:
 Ragioniamo come sempre a step. Prima la logica in italiano e poi traduciamo in codice.
 E ricordiamoci che console.log() è nostro amico!
 Buon divertimento e confermate lettura come al solito!
+
 Dati:
 Wayne Barnett
 Founder & CEO	
@@ -35,5 +36,26 @@ Barbara Ramos
 Graphic Designer	
 barbara-ramos-graphic-designer.jpg
 
+Tools :
+- array
+- object
+- concole.log
+- const/let
+- for
+- querySelector
+- insertAdiacentHTML
+
 
 */
+
+// creare un array di oggetti del team con seguenti informazioni: nome, ruolo e foto
+
+// Creare l’array di oggetti con le informazioni fornite
+
+// Stampare su console nome, ruolo e la stringa della foto
+
+// Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+// Trasformare la stringa foto in una immagine effettiva
+
+// Organizzare i singoli membri in card/schede
