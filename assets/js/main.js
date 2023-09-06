@@ -105,12 +105,31 @@ const team = [
 for (let i = 0; i < team.length; i++) {
     const figure = team[i];
     
-    console.log(figure.name);
-    console.log(figure['role']);
-    console.log(figure.image);
+    //console.log(figure.name);
+    //console.log(figure['role']);
+    //console.log(figure.image);
+
+    // Stampare le stesse informazioni su DOM sottoforma di stringhe
+    
+    const rowElement = document.querySelector('.team .row')
+    
+    const markupCards = `
+        <div class="col">
+            <div class="card h-100">
+                <img src="${figure['image']}" class="card-img-top" alt="profile foto">
+                <div class="card-body">
+                    <h5 class="card-title">${figure.name}</h5>
+                    <p class="card-text">${figure.role}</p>
+                </div>
+            </div>
+        </div>
+    `
+    
+    // console.log(markupCards);
+    
+    rowElement.insertAdjacentHTML('beforeend', markupCards);
 }
 
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
 
 // Trasformare la stringa foto in una immagine effettiva
 
