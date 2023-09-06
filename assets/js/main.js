@@ -62,6 +62,7 @@ markup            <div class="row row-cols-1 row-cols-md-3 g-4">
 
 // creare un array di oggetti del team con seguenti informazioni: nome, ruolo e foto
 
+// Creare l’array di oggetti con le informazioni fornite
 
 const team = [
     {
@@ -99,9 +100,15 @@ const team = [
 
 // console.log(team);
 
-// Creare l’array di oggetti con le informazioni fornite
+// Stampare su console nome, ruolo e la stringa della foto tramite ciclo
 
-// Stampare su console nome, ruolo e la stringa della foto
+for (let i = 0; i < team.length; i++) {
+    const figure = team[i];
+    
+    console.log(figure.name);
+    console.log(figure['role']);
+    console.log(figure.image);
+}
 
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
