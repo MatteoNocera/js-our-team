@@ -63,6 +63,41 @@ markup            <div class="row row-cols-1 row-cols-md-3 g-4">
 // creare un array di oggetti del team con seguenti informazioni: nome, ruolo e foto
 
 
+const team = [
+    {
+        name : 'Wayne Barnett',
+        role : 'Founder & CEO',
+        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/wayne-barnett-founder-ceo.jpg'
+    },
+    {
+        name : 'Angela Caroll',
+        role : 'Chief Editor',
+        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/angela-caroll-chief-editor.jpg'
+    },
+    {
+        name : 'Walter Gordon',
+        role : 'Office Manager',
+        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/walter-gordon-office-manager.jpg'
+    },
+    {
+        name : 'Angela Lopez',
+        role : 'Social Media Manager',
+        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/angela-lopez-social-media-manager.jpg'
+    },
+    {
+        name : 'Scott Estrada',
+        role : 'Developer',
+        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/scott-estrada-developer.jpg'
+    },
+    {
+        name : 'Barbara Ramos',
+        role : 'Graphic Designer',
+        image : 'https://github.com/MatteoNocera/js-our-team/blob/74d2bf72937fc5617a608e2662f2de4d041e1021/assets/img/barbara-ramos-graphic-designer.jpg'
+    }
+
+]
+
+// console.log(team);
 
 // Creare l’array di oggetti con le informazioni fornite
 
