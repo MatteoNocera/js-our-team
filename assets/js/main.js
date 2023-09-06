@@ -122,6 +122,27 @@ for (let i = 0; i < team.length; i++) {
 
 
 
-const insertNameElement = document.getElementById('your_name').value;
+/* const insertNameElement = document.querySelector('form').submit(); */
 
-console.log(insertNameElement);
+//console.log(insertNameElement);
+
+/* function formStart(event){
+    document.querySelector('form').submit(event);
+    event.preventDefault
+    let valueElement = document.getElementById('your_name').value;
+    console.log(valueElement);
+
+} */
+
+
+
+function formDate() {
+
+    let name = document.getElementById('your_name').value;
+    
+    team.push(name);  
+
+    //return false;
+}
+
+console.log(team);
